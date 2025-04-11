@@ -100,8 +100,7 @@ angle \) là **nửa Euler** khi và chỉ khi:
 
 ## 🔶 Với đồ thị **có hướng**
 
-**Đồ thị có hướng liên thông yếu** \( G = \langle V, E 
-angle \) là **nửa Euler** khi và chỉ khi:
+**Đồ thị có hướng liên thông yếu** \( G = (V, E) \) là **nửa Euler** khi và chỉ khi:
 
 - Có **hai đỉnh** `u` và `v` sao cho:
   - `out(u) - in(u) = 1`
