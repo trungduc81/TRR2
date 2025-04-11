@@ -1,1 +1,1 @@
-# L-thuy-t-th-
+Slide và lý thuyết TRR2
