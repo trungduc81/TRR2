@@ -77,8 +77,7 @@
 
 ## 🔷 Với đồ thị **vô hướng**
 
-**Đồ thị vô hướng liên thông** \( G = \langle V, E 
-angle \) là **nửa Euler** khi và chỉ khi:
+**Đồ thị vô hướng liên thông** \( G = (V, E) \) là **nửa Euler** khi và chỉ khi:
 
 - \( G \) có **0 hoặc 2 đỉnh bậc lẻ**:
   - Nếu có **2 đỉnh bậc lẻ**:  
