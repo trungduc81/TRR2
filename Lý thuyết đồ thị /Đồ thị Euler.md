@@ -127,3 +127,75 @@
 
 ✍️ *Ghi chú thêm*:  
 - Nếu không thỏa mãn các điều kiện trên thì đồ thị **không có đường đi Euler**, tức **không phải nửa Euler**.
+- 
+# 🧠 Thuật Toán Tìm Chu Trình Euler
+
+---
+
+## 🚀 Euler-Cycle(u)
+
+### 🔹 Bước 1: Khởi tạo
+
+```pseudocode
+stack = ∅            // Khởi tạo stack rỗng
+CE = []              // Khởi tạo mảng kết quả CE
+push(stack, u)       // Đưa đỉnh xuất phát u vào stack
+```
+### 🔹 Bước 2: Lặp cho đến khi stack rỗng
+
+```pseudocode
+while (stack ≠ ∅) do:
+    s = peek(stack)              // Lấy đỉnh đầu stack (không xóa)
+    
+    if (Ke(s) ≠ ∅) then:
+        t = đỉnh đầu tiên trong Ke(s)
+        push(stack, t)           // Đưa t vào stack
+        E = E \ {(s,t)}          // Xóa cạnh (s,t) khỏi đồ thị
+    else:
+        s = pop(stack)           // Lấy s ra khỏi stack
+        CE.append(s)             // Ghi nhận s vào kết quả CE
+    end if
+end while
+```
+
+---
+
+### 🔹 Bước 3: Trả kết quả
+
+```pseudocode
+Đảo ngược mảng CE → Chu trình Euler
+```
+
+---
+
+## 📘 Giải Thích Chi Tiết
+
+- **`Ke(s)`**: Danh sách các đỉnh kề (adjacent vertices) của đỉnh `s`.
+- **`stack`**: Dùng để duyệt theo chiều sâu (DFS), giữ đường đi hiện tại.
+- **`CE` (Cycle Euler)**: Lưu trữ chu trình Euler theo thứ tự ngược, cần đảo mảng này để có chu trình đúng.
+
+### ⚙️ Nguyên lý hoạt động:
+
+1. Luôn đi tiếp qua cạnh chưa được thăm (chưa bị xóa).
+2. Nếu tại đỉnh `s` không còn cạnh nào, ta backtrack (lùi lại) và đưa `s` vào kết quả.
+3. Tiếp tục lặp cho đến khi stack rỗng.
+4. Cuối cùng đảo ngược mảng `CE` sẽ thu được chu trình Euler.
+---
+## ✅ Điều kiện tồn tại Chu trình Euler
+
+- **Đồ thị vô hướng**: Tồn tại chu trình Euler khi:
+  - Đồ thị liên thông.
+  - Mọi đỉnh đều có **bậc chẵn**.
+
+- **Đồ thị có hướng**: Tồn tại chu trình Euler khi:
+  - Đồ thị liên thông mạnh.
+  - Với mọi đỉnh: **in-degree = out-degree**.
+
+---
+
+## 🔚 Tổng Kết
+
+- Thuật toán Euler-Cycle dựa trên nguyên lý **DFS và xóa dần cạnh**.
+- Lưu kết quả vào mảng khi không thể đi tiếp.
+- Sau khi duyệt xong, đảo ngược mảng kết quả sẽ là **chu trình Euler** mong muốn.
+
