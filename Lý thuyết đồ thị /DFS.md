@@ -1,6 +1,4 @@
-Dưới đây là nội dung của bạn đã được chuyển thành markdown:
 
-```markdown
 # Tìm kiếm theo chiều sâu - DFS
 
 - **Tư tưởng**  
@@ -59,5 +57,3 @@ while (stack ≠ ∅) {
 ```plaintext
 return <tập đỉnh đã duyệt>;  
 ```
-```
-
