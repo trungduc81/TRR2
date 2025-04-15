@@ -55,7 +55,7 @@ int main()
     faster();
     int t ; cin >> t ; 
     int n ; cin >> n ; 
-    int a[100][100] ; 
+    int a[101][101] ; 
     for(int i = 1 ; i <= n ; i++)
     {
     	for(int j = 1 ; j <= n ; j++)
