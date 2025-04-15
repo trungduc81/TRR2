@@ -53,7 +53,7 @@ using namespace std ;
 int main() 
 {
     faster();
-    freopen("DT.INT","r",stdin) ; 
+    freopen("DT.INP","r",stdin) ; 
     freopen("DT.OUT","w",stdout) ; 
     int t ; cin >> t ; 
     int n ; cin >> n ; 
